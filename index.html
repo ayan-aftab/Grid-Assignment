@@ -21,218 +21,162 @@
             font-family: Poppins, sans-serif;
         }
 
-        .head {
-            background-color: #030b2e;
-            width: 100%;
-            padding: 10px;
-        }
-
-        .menu {
-            background-color: tomato;
-            padding: 10px;
-            width: 100%;
-        }
-
         .container {
-            padding: 10px;
-        }
-
-        .header {
-
             display: grid;
-            gap: 5px;
-            grid-template-columns: 1fr 3fr;
-            background-color: #f2f2f2;
+            padding: 20px;
+            gap: 2px;
+            height: 98vh;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(8, 1fr);
         }
 
-        .hero {
-            width: 100%;
-            margin: 5px 0;
-            background-color: #386edb;
-            padding: 140px;
+        .hr {
+            background-color: rgb(3, 20, 57);
+            grid-column: span 1;
 
         }
 
-        .content {
-            display: grid;
-            grid-template-rows: 2fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 5px;
+        .me {
+            grid-column: span 3;
+            background-color: rgb(255, 0, 153);
+        }
+
+        .he {
+            grid-column: span 4;
+            grid-row: span 4;
+            background-color: rgb(0, 98, 245);
         }
 
         .main {
-
-            background-color: #041149;
-            padding: 20px;
-        }
-
-        .image {
-            background-color: #a2ef7f;
-            padding: 20px;
+            grid-row: span 2;
+            grid-column: span 2;
+            background-color: rgb(6, 23, 109);
         }
 
         .gap {
-            background-color: #f2f2f2;
+            grid-row: span 2;
+            grid-column: span 1;
         }
 
-        .extra {
-            background-color: #057565;
-            padding: 20px;
+        .im {
+            background-color: rgba(53, 220, 254, 0.58);
         }
 
-        .ie {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 5px;
+        .ex {
+            background-color: rgba(0, 243, 166, 0.765);
         }
 
-
-        .footer {
-            width: 100%;
-            margin-top: -55px;
-            background-color: #808080;
-            padding: 25px;
+        .ban {
+            grid-column: span 4;
+            background-color: rgba(255, 242, 0, 0.671);
         }
 
 
 
-        @media screen and (max-width: 768px) and (min-width: 601px) {
+        @media screen and (max-width:768px) {
             .container {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 0;
+                height: 100vh;
             }
 
-            .header {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
 
-            .head {
-                grid-area: header;
-                width: 768px;
-                text-align: center;
-                padding: 10px 49% 10px 45%;
-            }
-
-            .ie {
-                order: 10;
-            }
-
-            .menu {
-                grid-area: menu;
-                position: absolute;
-                top: 267px;
-                width: 191px;
-                padding: 154px 12px;
-            }
-
-            .hero {
-                margin: 0;
-                padding: 100px 10px;
-                grid-area: hero;
-            }
-
-            .content {
-                display: grid;
-                grid-template-columns: 1fr 3fr;
-                grid-template-rows: auto auto;
-                gap: 0;
-                grid-area: content;
-            }
-
-            .main {
-                grid-column: 2;
-                grid-row: 1;
-                padding: 80px 20px;
-            }
-
-            .gap {
-                display: none;
-            }
-
-            .ie {
-                grid-column: 2;
-                grid-row: 2;
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                gap: 0;
-            }
-
-            .image,
-            .extra {
-                padding: 25px 10px;
-            }
-
-            .footer {
-                grid-area: footer;
-                margin: 0;
-                padding: 30px 10px;
-            }
-
-            .container {
-                grid-template-areas:
-                    "header"
-                    "hero"
-                    "content"
-                    "footer";
-            }
-
-            .header {
-                display: grid;
-                grid-template-columns: 1fr;
-            }
-
-            .content {
-                grid-template-areas:
-                    "menu main"
-                    "menu ie";
-                grid-template-columns: 1fr 3fr;
-            }
-
-            .menu {
-                grid-column: 1;
-                grid-row: 1 / 2;
-            }
-        }
-
-
-        @media screen and (max-width:600px) {
-            .header {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                padding: 50px 10px;
+            .hr {
                 order: 1;
+                grid-column: span 4;
             }
 
-            .main {
-                padding: 50px 10px;
+            .he {
                 order: 2;
-            }
-
-            .content {
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr;
+                grid-column: span 4;
             }
 
             .gap {
                 display: none;
             }
 
-            .ie {
+            .me {
+                order: 3;
+                grid-column: span 1;
+                grid-row: span 4;
+            }
+
+            .main {
                 order: 4;
-
+                grid-column: span 3;
             }
 
-            .ie .extra {
-                order: 2;
+            .ban {
+                order: 5;
+                grid-column: span 3;
             }
 
-            .footer {
-                margin: 5px 0px 0px 0px;
+            .im {
+                order: 6;
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            .ex {
+                grid-row: span 1;
+                order: 7;
+                grid-column: span 1;
+            }
+        }
+
+
+
+        @media screen and (min-width:250px) and (max-width:568px) {
+            .container {
+                height: 100vh;
+            }
+
+            .hr {
+                order: 1;
+                padding: 10px;
+                grid-column: span 4;
+            }
+
+            .he {
+                padding: 10px;
                 order: 2;
+                grid-row: span 1;
+                grid-column: span 4;
+            }
+
+            .gap {
+                display: none;
+            }
+
+            .me {
+                padding: 10px;
+                order: 3;
+                grid-column: span 4;
+                grid-row: span 1;
+            }
+
+            .main {
+                order: 4;
+                padding: 10px;
+                grid-column: span 4;
+            }
+
+            .ban {
+                order: 5;
+                padding: 10px;
+                grid-column: span 4;
+            }
+
+            .im {
+                order: 6;
+                padding: 10px;
+                grid-column: span 4;
+                grid-row: span 1;
+            }
+
+            .ex {
+                grid-row: span 1;
+                padding: 10px;
+                order: 7;
+                grid-column: span 4;
             }
         }
     </style>
@@ -240,24 +184,14 @@
 
 <body>
     <div class="container">
-        <div class="header">
-            <div class="head">Header</div>
-            <div class="menu">Menu</div>
-        </div>
-
-
-        <div class="hero">Hero</div>
-        <div class="content">
-            <div class="main">Main</div>
-            <div class="gap"></div>
-            <div class="ie">
-                <div class="image">
-                    Image
-                </div>
-                <div class="extra">EXTRA</div>
-            </div>
-        </div>
-        <div class="footer">Banner</div>
+        <div class="hr">HEADER</div>
+        <div class="me">MENU</div>
+        <div class="he">HERO</div>
+        <div class="main">MAIN</div>
+        <div class="gap"></div>
+        <div class="im">IMAGE</div>
+        <div class="ex">EXTRA</div>
+        <div class="ban">BANNER</div>
 
     </div>
 </body>
